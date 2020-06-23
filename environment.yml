@@ -1,0 +1,15 @@
+name: intake
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python
+  - pip
+  - pip:
+    - git+https://github.com/sodre/filesystem_spec@i-zip-info-use-cache
+  - intake
+  - ipywidgets
+  - intake-xarray
+  - s3fs
+  - scikit-image
+

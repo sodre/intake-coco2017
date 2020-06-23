@@ -1,0 +1,43 @@
+metadata:
+  version: 1
+sources:
+  unlabeled:
+    description: Coco 2017 Unlabeled Images
+    driver: xarray_image
+    args:
+      urlpath: 'zip://**.jpg::blockcache://fast-ai-coco/unlabeled2017.zip::s3://'
+      storage_options:
+        s3:
+          anon: True
+        blockcache:
+          cache_storage: '{{ CATALOG_DIR }}/cache'
+  test:
+    description: Coco 2017 Test Images
+    driver: xarray_image
+    args:
+      urlpath: 'zip://**.jpg::blockcache://fast-ai-coco/test2017.zip::s3://'
+      storage_options:
+        s3:
+          anon: True
+        blockcache:
+          cache_storage: '{{ CATALOG_DIR }}/cache'
+  validation:
+    description: Coco 2017 Validation Images
+    driver: xarray_image
+    args:
+      urlpath: 'zip://**.jpg::blockcache://fast-ai-coco/val2017.zip::s3://'
+      storage_options:
+        s3:
+          anon: True
+        blockcache:
+          cache_storage: '{{ CATALOG_DIR }}/cache'
+  train:
+    description: Coco 2017 Train Images
+    driver: xarray_image
+    args:
+      urlpath: 'zip://**.jpg::blockcache://fast-ai-coco/train2017.zip::s3://'
+      storage_options:
+        s3:
+          anon: True
+        blockcache:
+          cache_storage: '{{ CATALOG_DIR }}/cache'
