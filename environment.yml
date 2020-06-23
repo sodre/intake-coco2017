@@ -1,4 +1,4 @@
-name: intake
+name: intake-coco2017
 channels:
   - conda-forge
   - defaults
